@@ -22,7 +22,7 @@ setTimeout(function(){
     for (var i = 0; i < 5; i++) {
         inputArray.push(parseInt(prompt('Indovina i numeri!')));
         /* controllo se il numero inserito è stato indovinato */
-        if (randomArray.includes(inputArray[i])) {
+        if (compare(randomArray, inputArray[i]) == true) {
             matchN.push(inputArray[i]);
         }
     }
