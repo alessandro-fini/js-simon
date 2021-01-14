@@ -27,12 +27,11 @@ setTimeout(function(){
         }
     }
     alert('Hai indovinato ' + matchN.length + ' numeri:\n\n' + matchN.join(' - '));
+    console.log(matchN);
 }, 30000);
-
 
 console.log(randomArray);
 console.log(inputArray);
-console.log(matchN);
 
 /* funzioni */
 function randomN(min, max) {
