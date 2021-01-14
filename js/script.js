@@ -3,7 +3,7 @@ Dopo 30 secondi l'utente deve inserire un prompt alla volta i numeri che ha vist
 sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati. */
 
 var randomArray = [];
-var i = 0;
+var inputArray = [];
 
 while (randomArray.length < 5) {
     /* numero generato */
@@ -16,7 +16,14 @@ while (randomArray.length < 5) {
 
 alert('I numeri da memorizzare sono:\n\n' + randomArray.join(' - '));
 
+setTimeout(function(){
+    for (var i = 0; i < 5; i++) {
+        inputArray.push(parseInt(prompt('Indovina i numeri!')));
+    }
+}, 3000);
+
 console.log(randomArray);
+console.log(inputArray);
 
 /* funzioni */
 function randomN(min, max) {
