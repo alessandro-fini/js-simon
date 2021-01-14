@@ -16,14 +16,23 @@ while (randomArray.length < 5) {
 
 alert('I numeri da memorizzare sono:\n\n' + randomArray.join(' - '));
 
+var matchN = [];
+
 setTimeout(function(){
     for (var i = 0; i < 5; i++) {
         inputArray.push(parseInt(prompt('Indovina i numeri!')));
+        /* controllo se il numero inserito è stato indovinato */
+        if (randomArray.includes(inputArray[i])) {
+            matchN.push(inputArray[i]);
+        }
     }
-}, 3000);
+    alert('Hai indovinato ' + matchN.length + ' numeri:\n\n' + matchN.join(' - '));
+}, 30000);
+
 
 console.log(randomArray);
 console.log(inputArray);
+console.log(matchN);
 
 /* funzioni */
 function randomN(min, max) {
@@ -37,3 +46,4 @@ function compare(a, b) {
         return false;
     }
 }
+
