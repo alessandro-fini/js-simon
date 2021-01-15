@@ -22,16 +22,16 @@ setTimeout(function(){
     for (var i = 0; i < 5; i++) {
         inputArray.push(parseInt(prompt('Indovina i numeri!')));
         /* controllo se il numero inserito è stato indovinato */
-        if (compare(randomArray, inputArray[i]) == true) {
+        if (compare(randomArray, inputArray[i]) == true && compare(matchN, inputArray[i]) == false) {
             matchN.push(inputArray[i]);
         }
     }
     alert('Hai indovinato ' + matchN.length + ' numeri:\n\n' + matchN.join(' - '));
+    console.log(inputArray);
     console.log(matchN);
-}, 30000);
+}, 3000);
 
 console.log(randomArray);
-console.log(inputArray);
 
 /* funzioni */
 function randomN(min, max) {
